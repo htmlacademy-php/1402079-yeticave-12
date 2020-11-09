@@ -38,43 +38,43 @@ $user_name = ''; // укажите здесь ваше имя
 
 $array = ['Доски и лыжи', 'Крепления', 'Ботинки', 'Одежда', 'Инструменты', 'Разное'];
 
-$table = array (array(
+$table = [ [
 	'name' => '2014 Rossignol District Snowboard',
 	'category'=> 'Доски и лыжи',
 	'price' => 10999,
 	'img' => 'img/lot-1.jpg'
-	),
-	array(
+	] ,
+	[
 	'name' => 'DC Ply Mens 2016/2017 Snowboard',
 	'category' => 'Доски и лыжи',
 	'price' => 159999,
 	'img' => 'img/lot-2.jpg'
-	),
-	array(
+	] ,
+	[
 	'name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
 	'category' => 'Крепления',
 	'price' => 8000,
 	'img' => 'img/lot-3.jpg'
-	),
-	array(
+	] ,
+	[
 	'name' => 'Ботинки для сноуборда DC Mutiny Charocal',
 	'category' => 'Ботинки',
 	'price' => 10999,
 	'img' => 'img/lot-4.jpg'
-	),
-	array(
+	] ,
+	[
 	'name' => 'Куртка для сноуборда DC Mutiny Charocal',
 	'category' => 'Одежда',
 	'price' => 7500,
 	'img' => 'img/lot-5.jpg'
-	),
-	array(
+	] ,
+	[
 	'name' => 'Маска Oakley Canopy',
 	'category' => 'Разное',
 	'price' => 5400,
 	'img' => 'img/lot-6.jpg'
-	)
-	);
+	]
+	] ;
 
 ?>
 <main class="container">
@@ -82,14 +82,10 @@ $table = array (array(
         <h2 class="promo__title">Нужен стафф для катки?</h2>
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
         <ul class="promo__list">
-            <?php
-            $index = 0;
-            $num = count($array);
-            while ($index < $num): ?>
+            <?php foreach ($array as $value): ?>
             <li class="promo__item promo__item--boards">
-                <a class="promo__link" href="pages/all-lots.html"><?=$array[$index]; ?></a>
-                <?php $index++; ?>
-            <?php endwhile; ?>
+                <a class="promo__link" href="pages/all-lots.html"><?=$value; ?></a>
+            <?php endforeach; ?>
             </li>
         </ul>
     </section>
@@ -128,14 +124,11 @@ $table = array (array(
     <nav class="nav">
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
-            <?php
-            $index = 0;
-            $num = count($array);
-            while ($index < $num): ?>
+			<?php foreach ($array as $value): ?>
             <li class="nav__item">
-                <a href="pages/all-lots.html"><?=$array[$index]; ?></a>
+                <a href="pages/all-lots.html"><?=$value; ?></a>
                 <?php $index++; ?>
-                <?php endwhile; ?>
+                <?php endforeach; ?>
             </li>
         </ul>
     </nav>
