@@ -127,7 +127,6 @@ $table = [ [
 			<?php foreach ($array as $value): ?>
             <li class="nav__item">
                 <a href="pages/all-lots.html"><?=$value; ?></a>
-                <?php $index++; ?>
                 <?php endforeach; ?>
             </li>
         </ul>
