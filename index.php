@@ -3,6 +3,14 @@ $is_auth = rand(0, 1);
 
 $user_name = 'Никита'; // укажите здесь ваше имя
 
+function formatSum ($number) {
+    $ceiledNumber = ceil($number);
+    if ($ceiledNumber < 1000) {
+       return $ceiledNumber;
+    }
+        return number_format($ceiledNumber, 0, ' ', ' ');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -122,7 +130,7 @@ $table = [ [
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$value['price']; ?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?php echo formatSum ($value['price']); ?> ₽</span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
