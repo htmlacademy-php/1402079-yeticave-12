@@ -4,11 +4,11 @@ $is_auth = rand(0, 1);
 $user_name = 'Никита'; // укажите здесь ваше имя
 
 function formatSum ($number) {
-    $number1 = ceil($number);
-    if ($number1 < 1000) {
-       return ceil($number1);
+    $ceiledNumber = ceil($number);
+    if ($ceiledNumber < 1000) {
+       return $ceiledNumber;
     }
-        return number_format($number1, 0, ' ', ' ');
+        return number_format($ceiledNumber, 0, ' ', ' ');
 }
 
 ?>
