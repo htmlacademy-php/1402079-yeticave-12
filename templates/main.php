@@ -30,11 +30,12 @@
                                 <span class="lot__cost"><?php echo formatSum (htmlspecialchars($lot['price'])); ?> ₽</span>
                             </div>
                             <div class="lot__timer timer">
-                                12:23
-                                <?php endforeach; ?>
+                                <?=time_left ($lot['end_lot']); ?>
+                                <div class="timer--finishing"></div>
                             </div>
                         </div>
                     </div>
                 </li>
+                <?php endforeach; ?>
             </ul>
         </section>
