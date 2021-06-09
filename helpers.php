@@ -152,12 +152,12 @@ function time_left($end_lot)
 
     $hours = floor($diff / 3600);
 
-    $minutes = floor(($diff - $hours*3600)/60);
-    $minutes = $minutes < 10 ? "0" . $minutes : $minutes;
+    $min = floor(($diff - $hours*3600)/60);
+    $min = $min < 10 ? "0" . $min : $min;
 
-    $seconds = $diff - 3600*$hours - 60*$minutes;
+    $seconds = $diff - 3600*$hours - 60*$min;
 
-    return "$hours:$minutes";
+    return "$hours:$min";
 }
 
 

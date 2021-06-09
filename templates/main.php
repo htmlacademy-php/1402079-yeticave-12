@@ -31,7 +31,7 @@
                             </div>
                             <div class="lot__timer timer">
                                 <?=time_left ($lot['end_lot']); ?>
-                                <div class="timer--finishing"></div>
+                                <div timer--finishing></div>
                             </div>
                         </div>
                     </div>
