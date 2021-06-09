@@ -143,4 +143,21 @@ function include_template($name, array $data = []) {
     return $result;
 }
 
+function time_left($end_lot)
+{
+    $now = time();
+    $end_lot_ts = strtotime($end_lot);
+
+    $diff = $end_lot_ts-$now;
+
+    $hours = floor($diff / 3600);
+
+    $min = floor(($diff - $hours*3600)/60);
+    $min = $min < 10 ? "0" . $min : $min;
+
+    $seconds = $diff - 3600*$hours - 60*$min;
+
+    return "$hours:$min";
+}
+
 
